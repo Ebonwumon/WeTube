@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 require_once('db.php');
 /**
@@ -12,7 +13,7 @@ $event_id = 1; //TODO
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href='bootstrap/css/bootstrap-responsive.min.css'>
+    <link rel="stylesheet" href='bootstrap/css/bootstrap.min.css'>
 </head>
 <body>
 <div class="masthead">
@@ -30,47 +31,49 @@ $event_id = 1; //TODO
           </div>
         </div></div>
 
-  <script type="text/javascript">
-
+<script type="text/javascript">
+    var player = document.getElementById("myytplayer");
     var params = { allowScriptAccess: "always" };
     var event_id = $('#event_id').html();
     var atts = { id: "myytplayer" };
-    swfobject.embedSWF("http://www.youtube.com/apiplayer?enablejsapi=1&version=3",
+    swfobject.embedSWF("http://www.youtube.com/apiplayer?&enablejsapi=1&version=3",
       "ytapiplayer", "960", "540", "8", null, null, params, atts);
 
     function onYouTubePlayerReady(playerid) {
-        ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+      var player = document.getElementById("myytplayer");
 
+        player.addEventListener("onStateChange", "onPlayerStateChange");
         $.get("api.php?type=queue&method=getNowPlaying&event_id=" + event_id, function(data) {
             data = JSON.parse(data);
             player.loadVideoById(data.youtube_id);
             player.playVideo();
         });
+    }
 
-    function onytPlayerStateChange(state) {
+    function onPlayerStateChange(state) {
         switch (state) {
             case 0: playNextVideo(); break;
         }
     }
 
     function playNextVideo() {
+      var player = document.getElementById("myytplayer");
+
         $.ajax({
             url: "api.php?type=queue&method=playNext",
             type: "POST",
             data: { event_id: event_id },
             success: function(data) {
-                data = JSON.parse(data);
-                player.loadVideoById(data.youtube_id);
+              data = JSON.parse(data);
+              var id = data.youtube_id;
+                player.loadVideoById(id);
                 player.playVideo();
             }
         });
     }
 
 
-      var player = document.getElementById("myytplayer");
-      /*player.loadVideoById("E5mwp264g-Q");
-      player.playVideo(); */
-    }
+          
       </script>
 
 </body>

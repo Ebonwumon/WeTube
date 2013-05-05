@@ -58,7 +58,7 @@ class DB {
             return array('error' => 'nothing to do here'. $queryPrepared->er);
         }
         $event_id = $this->pdo->lastInsertId();
-        return array('TAG_SUCCESS' => 1, );
+        return array('TAG_SUCCESS' => 1, 'event_id' => $event_id);
     }
 
     function showEvents() {
