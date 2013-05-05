@@ -22,6 +22,7 @@ switch($_GET['type']) {
             case 'vote': print json_encode($db->vote($_POST['item_id'], $_POST['user_id'], $_POST['vote'])); break;
             default:
             case 'getAll': print json_encode($db->getAllInVoteQueue($_GET['event_id'])); break;
+            case 'playNext': print json_encode($db->playNext($_POST['event_id'])); break;
             case 'getNowPlaying': print json_encode($db->getNowPlaying($_GET['event_id'])); break;
         }
     break;

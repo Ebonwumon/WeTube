@@ -36,7 +36,7 @@ class DB {
     }
 
     function getNowPlaying($event_id) {
-        $query = "SELECT ID, youtube_name
+        $query = "SELECT ID, youtube_name, youtube_id
                   FROM queue_history
                   WHERE in_event = :event_id
                   ORDER by DATE DESC";
