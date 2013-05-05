@@ -99,7 +99,7 @@ class DB {
     }
 
     function login($handle) {
-        $query = "SELECT name from users where name = :handle";
+        $query = "SELECT id from users where name = :handle";
         $queryPrepared = $this->pdo->prepare($query);
         $queryPrepared->bindValue(':handle', $handle);
         if (!$queryPrepared->execute()) {
@@ -110,9 +110,10 @@ class DB {
             $prepared = $this->pdo->prepare($insert);
             $prepared->bindValue(':handle', $handle);
             $prepared->execute();
-            return array('username' => $handle);
+            return array('user_id' => $this->pdo->lastInsertId());
         }
-        return array ('username' => $handle);
+        $data = $queryPrepared->fetch();
+        return array ('username' => $data['id']);
     }
 
     function _replaceQueue($data) {

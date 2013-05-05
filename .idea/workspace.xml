@@ -4,7 +4,7 @@
     <list default="true" id="dc04336b-6994-49f3-87ef-ac230fc7faee" name="Default" comment="" />
     <ignored path="CollectiveJukebox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367740273726" ignored="false" />
+    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367742533397" ignored="false" />
     <file path="/api.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367741518507" ignored="false" />
     <file path="/queue.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367726965848" ignored="false" />
     <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367741640190" ignored="false" />
@@ -27,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="53" selection-start="1149" selection-end="1149" vertical-scroll-proportion="54.375">
+            <state line="115" column="49" selection-start="4733" selection-end="4733" vertical-scroll-proportion="0.5471698">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.31338027">
+            <state line="32" column="0" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-7.4166665">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -67,9 +67,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/api/queue.php" />
-        <option value="$PROJECT_DIR$/db.php" />
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/db.php" />
       </list>
     </option>
   </component>
@@ -274,10 +274,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="53" selection-start="1149" selection-end="1149" vertical-scroll-proportion="54.375">
-          <folding />
+        <state line="32" column="0" selection-start="1002" selection-end="1002" vertical-scroll-proportion="-7.4166665">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -288,12 +290,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.31338027">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="115" column="49" selection-start="4733" selection-end="4733" vertical-scroll-proportion="0.5471698">
+          <folding />
         </state>
       </provider>
     </entry>
