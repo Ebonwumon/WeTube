@@ -31,7 +31,29 @@ $event_id = 1; //TODO
           </div>
         </div></div>
 
+<div class ="row">
+<div class="span10 offset1">
+<table id="queue" class="table">
+<thead>
+<tr><th>Name</th><th>Votes</th><th>Requester</th></tr>
+</thead>
+</table>
+</div>
+</div>
+
 <script type="text/javascript">
+function insertTableRow(data) {
+    $('#queue').prepend("<tr id=tr"+data.ID+"><td>"+data.video_name+"</td><td>"+data.vote+"</td><td>"+data.username+"</td></tr>");
+    }  
+
+    $(document).ready(function() {
+      $.get("api.php?type=queue&method=getAll&event_id=" + event_id, function(data) {
+        data = JSON.parse(data);
+        for (var v in data) {
+          insertTableRow(data[v]);
+        }
+      });
+    });
     var player = document.getElementById("myytplayer");
     var params = { allowScriptAccess: "always" };
     var event_id = $('#event_id').html();
@@ -65,6 +87,8 @@ $event_id = 1; //TODO
             data: { event_id: event_id },
             success: function(data) {
               data = JSON.parse(data);
+              console.log(data);
+              $('#tr'+data.ID).hide('fast');
               var id = data.youtube_id;
                 player.loadVideoById(id);
                 player.playVideo();

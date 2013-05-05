@@ -23,7 +23,7 @@ class DB {
 
     //API FUNCS
     function getAllInVoteQueue($event_id) {
-        $query = "SELECT users.name as username, queue.youtube_name as video_name, queue.vote
+        $query = "SELECT users.name as username, queue.youtube_name as video_name, queue.vote, queue.ID
                  FROM users, queue
                  WHERE queue.in_event = :event_id
                  ORDER by queue.vote";
@@ -65,7 +65,7 @@ class DB {
         $query = "SELECT * from events";
         $queryPrepared = $this->pdo->prepare($query);
         $queryPrepared->execute();
-        return array_merge(array('STATUS_TAG' => 1), $queryPrepared->fetchAll());
+        return array_merge(array('TAG_SUCCESS' => 1), $queryPrepared->fetchAll());
 
     }
 
