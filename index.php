@@ -1,4 +1,5 @@
 <?php
+require_once('db.php');
 /**
  * Created by JetBrains PhpStorm.
  * User: ebon
@@ -6,7 +7,7 @@
  * Time: 23:51
  * To change this template use File | Settings | File Templates.
  */
-
-echo "hello world";
+$db = new DB();
+print_r($db->playNext(1));
 
 ?>

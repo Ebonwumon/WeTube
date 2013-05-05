@@ -115,11 +115,56 @@ class DB {
         return array ('username' => $handle);
     }
 
+    function _replaceQueue($data) {
+        $ins = "INSERT into queue_history (user_id, youtube_id, youtube_name, vote, in_event)
+                    VALUES (:user_id, :youtube_id, :youtube_name, :vote, :in_event)";
+        $insPrep = $this->pdo->prepare($ins);
+        $bind = array(':in_event' => $data['in_event'], ':youtube_id' => $data['youtube_id'], ':youtube_name' => $data['youtube_name'], ':user_id' => $data['user_id'], ':vote' => $data['vote']);
+        $insPrep->execute($bind);
+        $del = $this->pdo->prepare("DELETE FROM queue where ID = :id");
+        $del->execute(array(':id' => $data['ID']));
+    }
+
     function playNext($event_id) {
         //TODO make sure this is proper
         $this->pdo->beginTransaction();
-        $query = "SELECT * from queue
-                  WHERE in_event = :event_id AND vote = max(vote)";
+        $query = "SELECT q.* from queue q
+                  INNER JOIN (
+                  select max(vote) as MaxVote
+                  from queue
+                  ) maxed ON maxed.MaxVote = q.vote";
+        $queryPrepared = $this->pdo->prepare($query);
+        $queryPrepared->bindValue(':event_id', $event_id);
+        if (!$queryPrepared->execute()) {
+            return array ('error' => "couldn't play next " . implode($queryPrepared->errorInfo()));
+        }
+        if ($queryPrepared->rowCount() == 0) {
+            return array ('error' => "no more results to play"); // TODO must fix
+        }
+        if ($queryPrepared->rowCount() == 1) {
+            $data = $queryPrepared->fetch();
+        } else {
+            $data = $queryPrepared->fetchAll();
+        }
+        if ($queryPrepared->rowCount() > 1) {
+            $i = 0;
+            $max = $data[0]['date'];
+            $maxIndex = 0;
+            foreach ($data as $row) {
+                if ($row['date'] >= $max) {
+                    $max = $row['date'];
+                    $maxIndex = $i;
+                }
+                $i++;
+            }
+            $this->_replaceQueue($data[$maxIndex]);
+            $this->pdo->commit();
+            return $data[$maxIndex];
+        }
+        $this->_replaceQueue($data);
+        $this->pdo->commit();
+        return $data;
+
     }
 
 
