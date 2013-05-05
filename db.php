@@ -23,7 +23,7 @@ class DB {
 
     //API FUNCS
     function getAllInVoteQueue($event_id) {
-        $query = "SELECT users.name, queue.youtube_name, queue.vote
+        $query = "SELECT users.name as username, queue.youtube_name as video_name, queue.vote
                  FROM users, queue
                  WHERE queue.in_event = :event_id
                  ORDER by queue.vote";
@@ -110,9 +110,9 @@ class DB {
             $prepared = $this->pdo->prepare($insert);
             $prepared->bindValue(':handle', $handle);
             $prepared->execute();
-            return array('message' => "done");
+            return array('username' => $handle);
         }
-        return array ('message' => 'done');
+        return array ('username' => $handle);
     }
 
     function playNext($event_id) {

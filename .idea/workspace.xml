@@ -4,8 +4,8 @@
     <list default="true" id="dc04336b-6994-49f3-87ef-ac230fc7faee" name="Default" comment="" />
     <ignored path="CollectiveJukebox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367730543052" ignored="false" />
-    <file path="/api.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367724611382" ignored="false" />
+    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367731965376" ignored="false" />
+    <file path="/api.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367732066621" ignored="false" />
     <file path="/queue.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367726965848" ignored="false" />
     <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367729922070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="39" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.027027028">
+            <state line="114" column="45" selection-start="4660" selection-end="4660" vertical-scroll-proportion="1.3243244">
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
+            <state line="5" column="25" selection-start="73" selection-end="73" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="api.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+            <state line="31" column="4" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-19.375">
               <folding />
             </state>
           </provider>
@@ -65,9 +65,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/api/queue.php" />
-        <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/db.php" />
+        <option value="$PROJECT_DIR$/api.php" />
       </list>
     </option>
   </component>
@@ -155,13 +155,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="0" width="1335" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23924941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23924941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -286,23 +286,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+        <state line="5" column="25" selection-start="73" selection-end="73" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
+        <state line="31" column="4" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-19.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="39" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.027027028">
+        <state line="114" column="45" selection-start="4660" selection-end="4660" vertical-scroll-proportion="1.3243244">
           <folding />
         </state>
       </provider>
