@@ -10,15 +10,25 @@ require_once('db.php');
 $db = new DB();
 $event_id = 1; //TODO
 ?>
+<html>
+<head>
+    <link rel="stylesheet" href='bootstrap/css/bootstrap-responsive.min.css'>
+</head>
+<body>
+<div class="masthead">
+    <h3 class="muted">WeTube</h3>
+</div>
 
 <div id="event_id" style="display:none;">
     <?php echo $event_id; ?>
 </div>
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="swfobject/swfobject.js"></script>    
-  <div id="ytapiplayer">
+<div class="row-fluid"><div class="span10 offset1">
+<div id="ytapiplayer">
         You need Flash player 8+ and JavaScript enabled to view this video.
           </div>
+        </div></div>
 
   <script type="text/javascript">
 
@@ -62,3 +72,6 @@ $event_id = 1; //TODO
       player.playVideo(); */
     }
       </script>
+
+</body>
+</html>
