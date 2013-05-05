@@ -7,7 +7,8 @@
     <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367749974993" ignored="false" />
     <file path="/api.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367747015491" ignored="false" />
     <file path="/queue.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367726965848" ignored="false" />
-    <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367747436917" ignored="false" />
+    <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367751134603" ignored="false" />
+    <file path="/login.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367751080403" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +28,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.7027027">
+            <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="-16.25">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mob/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="29" selection-start="234" selection-end="234" vertical-scroll-proportion="0.29049295">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mob/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="7" selection-start="346" selection-end="346" vertical-scroll-proportion="-8.125">
+              <folding>
+                <element signature="e#6#159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +91,8 @@
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/db.php" />
+        <option value="$PROJECT_DIR$/mob/login.php" />
+        <option value="$PROJECT_DIR$/mob/index.php" />
       </list>
     </option>
   </component>
@@ -121,6 +144,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CollectiveJukebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollectiveJukebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollectiveJukebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mob" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,7 +329,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.7027027">
+        <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mob/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="7" selection-start="346" selection-end="346" vertical-scroll-proportion="-8.125">
+          <folding>
+            <element signature="e#6#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mob/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="234" selection-end="234" vertical-scroll-proportion="0.29049295">
           <folding />
         </state>
       </provider>
