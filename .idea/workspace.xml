@@ -4,10 +4,10 @@
     <list default="true" id="dc04336b-6994-49f3-87ef-ac230fc7faee" name="Default" comment="" />
     <ignored path="CollectiveJukebox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367747101112" ignored="false" />
+    <file path="/db.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367749974993" ignored="false" />
     <file path="/api.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367747015491" ignored="false" />
     <file path="/queue.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367726965848" ignored="false" />
-    <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367743038589" ignored="false" />
+    <file path="/index.php" changelist="dc04336b-6994-49f3-87ef-ac230fc7faee" time="1367747436917" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="81" selection-start="2465" selection-end="2465" vertical-scroll-proportion="0.8018018">
+            <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.7027027">
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="41" selection-start="932" selection-end="932" vertical-scroll-proportion="-5.0">
+            <state line="89" column="32" selection-start="2655" selection-end="2655" vertical-scroll-proportion="-18.04054">
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -67,8 +67,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/api/queue.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/api.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/db.php" />
       </list>
     </option>
@@ -274,15 +274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="41" selection-start="932" selection-end="932" vertical-scroll-proportion="-5.0">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="69" selection-start="468" selection-end="468" vertical-scroll-proportion="-8.75">
@@ -290,9 +281,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="32" selection-start="2655" selection-end="2655" vertical-scroll-proportion="-18.04054">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="81" selection-start="2465" selection-end="2465" vertical-scroll-proportion="0.8018018">
+        <state line="70" column="58" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.7027027">
           <folding />
         </state>
       </provider>

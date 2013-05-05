@@ -65,7 +65,12 @@ class DB {
         $query = "SELECT * from events";
         $queryPrepared = $this->pdo->prepare($query);
         $queryPrepared->execute();
-        return array_merge(array('TAG_SUCCESS' => 1), $queryPrepared->fetchAll());
+        $data = $queryPrepared->fetchAll();
+        $return = array();
+        foreach ($data as $row) {
+            array_push($return, array('ID' => $row['ID'], 'name' =>$row['name'], 'description' => $row['description']));
+        }
+        return array_merge($return, array('TAG_SUCCESS' => 1));
 
     }
 
