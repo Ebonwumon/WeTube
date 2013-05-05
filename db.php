@@ -58,7 +58,15 @@ class DB {
             return array('error' => 'nothing to do here'. $queryPrepared->er);
         }
         $event_id = $this->pdo->lastInsertId();
-        return array('event_id' => $event_id, 'TAG_SUCCESS' => 1);
+        return array('TAG_SUCCESS' => 1, );
+    }
+
+    function showEvents() {
+        $query = "SELECT * from events";
+        $queryPrepared = $this->pdo->prepare($query);
+        $queryPrepared->execute();
+        return array_merge(array('STATUS_TAG' => 1), $queryPrepared->fetchAll());
+
     }
 
     function vote($queue_id, $user_id, $vote_val) {

@@ -13,7 +13,9 @@ $db = new DB();
 switch($_GET['type']) {
     case 'event':
         switch($_GET['method']) {
-            case 'create': print json_encode($db->createEvent($_POST['user_id'], $_POST['name'], $_POST['desc']));
+            case 'create': print json_encode($db->createEvent($_POST['user_id'], $_POST['name'], $_POST['desc']));break;
+            case 'show': print json_encode($db->showEvents()); break;
+
         } break;
     break;
     case 'queue':
