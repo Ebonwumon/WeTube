@@ -45,7 +45,7 @@ class DB {
         if (!$queryPrepared->execute()) {
             return array('error' => 'could not get currently playing '. implode($queryPrepared->errorInfo()));
         }
-        return $queryPrepared->fetch();
+        return array_merge($queryPrepared->fetch(), array('TAG_SUCCESS' => 1));
     }
 
     function createEvent($user_id, $name, $desc) {
@@ -58,7 +58,7 @@ class DB {
             return array('error' => 'nothing to do here'. $queryPrepared->er);
         }
         $event_id = $this->pdo->lastInsertId();
-        return array('event_id' => $event_id);
+        return array('event_id' => $event_id, 'TAG_SUCCESS' => 1);
     }
 
     function vote($queue_id, $user_id, $vote_val) {
@@ -84,7 +84,7 @@ class DB {
         $finallyPrep = $this->pdo->prepare($finally);
         $finallyPrep->execute(array(':user_id' => $user_id, ':vote_val' => $vote_val));
         $this->pdo->commit();
-        return array('message' => "success");
+        return array('TAG_SUCCESS' => 1);
     }
 
     function addToQueue($event_id, $youtube_id, $youtube_name, $user_id) {
@@ -94,7 +94,7 @@ class DB {
         if(!$queryPrepared->execute(array(':event_id' => $event_id, ':youtube_id' => $youtube_id, ':youtube_name' => $youtube_name, ':user_id' => $user_id))) {
             return array ('error' => 'Error adding ' . $queryPrepared->errorInfo());
         }
-        return array ('message' => 'success');
+        return array ('TAG_SUCCESS' => 1);
 
     }
 
@@ -113,7 +113,7 @@ class DB {
             return array('user_id' => $this->pdo->lastInsertId());
         }
         $data = $queryPrepared->fetch();
-        return array ('username' => $data['id']);
+        return array ('username' => $data['id'], 'TAG_SUCCESS' => 1);
     }
 
     function _replaceQueue($data) {
